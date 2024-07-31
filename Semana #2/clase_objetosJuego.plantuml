@@ -1,0 +1,48 @@
+@startuml first
+
+class Personaje {
+    +string especie
+    +string color
+    +string genero
+    -int vidaRestante
+    -bool estado
+
+    +void regenerarVida()
+    -void morir()
+    +void reaparecer()
+    +void getVidaRestante()
+    +void getEstado()
+}
+
+class armaPrincipal {
+    +string tipo
+    -int rango
+    -int danoBase
+    -int velocidadDisparo
+    -int municionRestante
+
+    +void equiparArma()
+    +void usarAtaqueBase()
+    +void usarAtaqueEspecial()
+    +void getRango()
+    +void getDanoBase()
+    +void getVelocidadDisparo()
+    +void getMunicionRestante()
+}
+
+class armaSecundaria {
+    +string tipo
+    -int rango
+    -int danoBase
+    -int danoSecundario
+    +int consumoMunicion
+
+    +void usarAtaque()
+    +void usarAccionEspecial()
+    -void destruirArma()
+    +void getRango()
+    +void getDanoBase()
+    +void getDanoSecundario()
+}
+
+@enduml

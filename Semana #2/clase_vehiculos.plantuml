@@ -1,0 +1,17 @@
+@startuml first
+
+class Automovil {
+    string color
+    string modelo
+    string tipo
+    int velocidad
+    int numeroPlaca
+
+    +void registrarPlaca()
+    +void cambiarColor()
+    +void acelerar()
+    +void desacelerar()
+    +void frenar()
+}
+
+@enduml
