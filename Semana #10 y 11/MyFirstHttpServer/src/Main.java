@@ -9,16 +9,16 @@ import server.Server;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-//        DB.loadData();
-//        ArrayList<Todo> todos = new ArrayList<Todo>();
-//        JSONArray jsonArray = DB.data.getJSONArray("todos");
-//        for (int i = 0; i < jsonArray.length(); i++){
-//            todos.add(new Gson().fromJson(jsonArray.get(i).toString(), Todo.class));
-//        }
+        DB.loadData();
+        ArrayList<Todo> todos = new ArrayList<Todo>();
+        JSONArray jsonArray = DB.data.getJSONArray("todos");
+        for (int i = 0; i < jsonArray.length(); i++){
+            todos.add(new Gson().fromJson(jsonArray.get(i).toString(), Todo.class));
+        }
 //        Todo newTodo = new Todo("", "Buy groceries", false);
 //        todos.add(newTodo);
-//        DB.data.put("todos", todos);
-//        DB.saveData();
+        DB.data.put("todos", todos);
+        DB.saveData();
         new Server().start();
     }
 }
